@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US" data-rx-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/ref-x-site/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/ref-x-site/favicon-16.png" />
+    <link rel="icon" type="image/png" href="/ref-x-site/favicon.png" />
+    <link rel="apple-touch-icon" href="/ref-x-site/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="REF-X is the tournament layer for physical arcade cabinets." />
+    <title>REF-X</title>
+    <script>
+      (function () {
+        var key = "rx-site-theme-preference";
+        var saved = localStorage.getItem(key);
+        var scheme = "dark";
+        if (saved === "light") scheme = "light";
+        else if (saved === "dark") scheme = "dark";
+        else if (saved === "system" && window.matchMedia("(prefers-color-scheme: light)").matches) {
+          scheme = "light";
+        }
+        document.documentElement.setAttribute("data-rx-theme", scheme);
+      })();
+    </script>
+    <script type="module" crossorigin src="/ref-x-site/assets/index-CiwxdkUa.js"></script>
+    <link rel="stylesheet" crossorigin href="/ref-x-site/assets/index-CsIr0wUE.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
